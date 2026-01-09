@@ -1,6 +1,5 @@
 package io.github.nuvemazul.backend.dtos;
 
-import java.io.Serializable;
 import java.util.List;
 
 public record CreateGameEvent(
@@ -9,4 +8,4 @@ public record CreateGameEvent(
     String type,
     String imageUrl,
     List<DownloadRequestDTO> download
-) implements Serializable {}
+) {}

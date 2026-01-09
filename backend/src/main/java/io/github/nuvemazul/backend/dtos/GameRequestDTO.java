@@ -1,6 +1,5 @@
 package io.github.nuvemazul.backend.dtos;
 
-import java.io.Serializable;
 import java.util.List;
 
 public record GameRequestDTO(
@@ -8,5 +7,5 @@ public record GameRequestDTO(
     String description, 
     String type,
     List<DownloadRequestDTO> download
-) implements Serializable {
+){
 }

@@ -1,6 +1,7 @@
 package io.github.nuvemazul.backend.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -16,7 +17,7 @@ public class Download {
     private String url;
     private String service; //e.g., Google Drive, Dropbox
     @JoinColumn(name = "game_id")
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Games game;
 
 }
